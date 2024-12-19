@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פאנל ניהול</title>
+    <link rel="stylesheet" href="adminCss.css">
+</head>
+<body>
+<div id="admin-container">
+    <h1>פאנל ניהול</h1>
+
+    <section id="add-question">
+        <h2>הוספת שאלה חדשה</h2>
+        <form id="questionForm">
+            <label for="question">שאלה:</label>
+            <input type="text" id="question" placeholder="הכנס שאלה" required>
+
+            <label>תשובות אפשריות:</label>
+            <input type="text" id="option1" placeholder="תשובה 1" required>
+            <input type="text" id="option2" placeholder="תשובה 2" required>
+            <input type="text" id="option3" placeholder="תשובה 3" required>
+
+            <label for="correct">תשובה נכונה (מספר בין 0 ל-2):</label>
+            <input type="number" id="correct" min="0" max="2" required>
+
+            <button type="submit">הוסף שאלה</button>
+        </form>
+    </section>
+
+    <section id="upload-file">
+        <h2>העלאת שאלות ותשובות</h2>
+        <input type="file" id="fileInput" accept=".xlsx, .xls, .docx, .pdf">
+        <button onclick="uploadFile()">העלה קובץ</button>
+    </section>
+
+    <section id="view-answers">
+        <h2>תשובות סטודנטים</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>שם סטודנט</th>
+                <th>תשובות</th>
+                <th>ציון</th>
+            </tr>
+            </thead>
+            <tbody id="answersTable">
+            </tbody>
+        </table>
+    </section>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

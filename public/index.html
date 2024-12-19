@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שאלונים לסטודנטים</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+    <h1>שאלון לסטודנטים</h1>
+    <form id="studentForm">
+        <label for="studentName">שם:</label>
+        <input type="text" id="studentName" placeholder="הכנס שם מלא" required>
+        <button type="submit">התחל שאלון</button>
+    </form>
+
+    <div id="quiz" style="display:none;">
+        <div id="questions"></div>
+        <button id="submitQuiz">שלח תשובות</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
